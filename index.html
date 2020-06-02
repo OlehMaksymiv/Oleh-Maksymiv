@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/fakeLoader.css">
+   <link href="https://fonts.googleapis.com/css?family=Jura|Kelly+Slab" rel="stylesheet">
+    <title>FASTASF</title>
+</head>
+<body>
+<div class="myloader"> </div>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>	
+	<script>
+	$(".myloader").fakeLoader({  
+	timeToHide: 3000,
+	bgColor: "#000000",
+	spinner: "spinner1"
+	});	
+</script>
+	<div class="myloader"> </div>
+<div class="grid" style="display: grid;" class="parallax-window" data-parallax="scroll" data-image-src="img/0.jpg">
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<header>
+  <nav class="container">
+    <div class="m1">
+    <a href="#cb2" class="navmenu">About</a>
+    </div>
+    <div class="m2">
+    <a href="#cb3" class="navmenu">Tuning</a>
+    </div>
+    <div class="logo">
+    <a href="#cb1" class="navmenu">FASTASF</a>
+    </div>
+    <div class="m3">
+    <a href="#cb4" class="navmenu">Info</a>
+    </div>
+    <div class="m4">
+    <a href="#cb5" class=navmenu>Gallery</a>
+    </div>
+  </nav>
+</header>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div class="contblock1" id="cb1">
+            <p>FASTASF</p>
+            <p>Чіп-тюнінг від спеціалістів</p>
+        </div>
+        <div class="contblock2" id="cb2">
+            <p>Чому ми</p>
+            <p>-Налаштування на мощностном стенді, з урахуванням особливостей палива, пробігу та можливостей двигуна.</p>
+            <p>-Сприяння при виникненні гарантійних питань.</p>
+            <p>-Досвід робіт і великий список партнерів, за допомогою яких Ми досягаємо максимального результату.</p>
+            <p>-2 роки гарантії на програмне забезпечення та 1 рік на зварювальні та механічні роботи.</p>
+            <p>-Індивідуальний підхід до вимог кожного клієнта.</p>
+        </div>
+        <div class="contblock3" id="cb3">
+            Чіп-тюнінг - це перепрограмування електронного блоку управління двигуном (ЕБУ), з метою поліпшення потужності і динаміки автомобіля без втрати ресурсу, оптимізуючи ККД самого двигуна. Крім того, при спокійній манері їзди спостерігається також скорочення витрати палива. В основі своїй - це програмне збільшення потужності автомобіля за рахунок оптимізації роботи програми управління двигуном і звільнення прихованого потенціалу.
+        </div>
+        <div class="contblock4" id="cb4">
+            Часом збільшення потужності на програмному рівні можливо більш ніж на 100%! А так як ми пропонуємо тільки обкатані і безпечні рішення завдяки співпраці з провідними розробниками, Ви отримаєте оптимальний продукт за співвідношенням продуктивність / надійність. Ніяких ризиків і випробувань над Вашим авто, в компанії Sprintech ви отримаєте продукт, яким будете задоволені. Крім вимірів і налаштування авто на діностенд ми також проводимо заміри реальної динаміки авто (0-100, 100-200, 1/4 милі), за допомогою професійного пристрою Racelogic - таким чином, Ви отримуєте не тільки відчуття, але і бачите реальні цифри розгону вашого авто до і після робіт.
+        </div>
+        <div class="contblock5" id="cb5">
+        <div id="carousel" class="carousel">
+            <button class="arrow prev">⇦</button>
+        <div class="gallery">
+        <ul class="images">
+        <li><img src="img/1.jpg"></li>
+        <li><img src="img/2.jpg"></li>
+        <li><img src="img/3.jpg"></li>
+        <li><img src="img/4.jpg"></li>
+        <li><img src="img/5.jpg"></li>
+        <li><img src="img/6.jpg"></li>
+        <li><img src="img/7.jpg"></li>
+        <li><img src="img/8.jpg"></li>
+        <li><img src="img/9.jpg"></li>
+        <li><img src="img/10.jpg"></li>
+        <li><img src="img/11.jpg"></li>
+        <li><img src="img/12.jpg"></li>
+        <li><img src="img/13.jpg"></li>
+        <li><img src="img/14.jpg"></li>
+        <li><img src="img/15.jpg"></li>
+        <li><img src="img/16.jpg"></li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+  </div>
+
+  <script>
+    
+    var lis = document.getElementsByTagName('li');
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].style.position = 'relative';
+      var span = document.createElement('span');
+      span.style.cssText = 'position:absolute;left:0;top:0';
+      span.innerHTML = i + 1;
+      lis[i].appendChild(span);
+    }
+
+    
+    var width = 130;
+    var count = 3; 
+
+    var carousel = document.getElementById('carousel');
+    var list = carousel.querySelector('ul');
+    var listElems = carousel.querySelectorAll('li');
+
+    var position = 0; 
+
+    carousel.querySelector('.prev').onclick = function() {
+      
+      position = Math.min(position + width * count, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('.next').onclick = function() {
+     
+      position = Math.max(position - width * count, -width * (listElems.length - count));
+      list.style.marginLeft = position + 'px';
+    };
+  </script>
+        </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <footer>
+ <form class="form-container">
+                <div class="form-title"><strong>Sign up</strong></div>
+                <div class="field-title-a"><strong>Name</strong></div>
+                    <input class="form-field" type="text" name="firstname" /><br />
+                <div class="field-title-b"><strong>Email</strong></div>
+                    <input class="form-field" type="text" name="email" /><br />
+                <div class="submit-container">
+                    <input class="submit-button" type="submit" value="Submit" />
+                </div>
+            </form>
+    </footer>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+</div>
+</body>
+</html>
